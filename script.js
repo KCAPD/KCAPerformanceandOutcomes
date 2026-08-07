@@ -15,6 +15,14 @@
     menuButton?.setAttribute('aria-expanded', 'false');
   }));
 
+  document.querySelector('#family-story-grid').innerHTML = data.familyStory.map((item, i) => `
+    <article class="family-story-card reveal" style="--delay:${i * 70}ms">
+      <span class="family-story-value">${esc(item.value)}</span>
+      ${item.suffix ? `<span class="family-story-suffix">${esc(item.suffix)}</span>` : ''}
+      <h3>${esc(item.title)}</h3>
+      <p>${esc(item.copy)}</p>
+    </article>`).join('');
+
   document.querySelector('#highlight-grid').innerHTML = data.highlights.map((h, i) => `
     <article class="highlight-card reveal" style="--delay:${i * 70}ms">
       <span class="highlight-meta">${esc(h.meta)}</span>
@@ -35,7 +43,6 @@
     const latest = [
       ['KCA', m.school[2], 'school'], ['Camden', m.camden[2], ''], ['National', m.national[2], '']
     ];
-    const values = latest.filter(x => x[1] !== null).map(x => x[1]);
     const max = m.unit.includes('/ 25') ? 25 : 100;
     return `<div class="latest-bars" aria-label="2026 comparison">
       ${latest.map(([label,v,cls]) => `
@@ -88,6 +95,81 @@
           <div><p>${esc(section.commentary)}</p></div>
         </details>
       </div>`;
+  });
+
+  const explorer = data.ks2Explorer;
+  const explorerEl = document.querySelector('#ks2-explorer');
+  const groupEntries = Object.entries(explorer.groups);
+
+  const renderExplorerShell = () => {
+    explorerEl.innerHTML = `
+      <div class="cohort-picker" role="tablist" aria-label="Choose a pupil cohort">
+        ${groupEntries.map(([key,g], i) => `<button class="cohort-chip ${i===0?'active':''}" role="tab" aria-selected="${i===0?'true':'false'}" data-group="${esc(key)}">${esc(g.short)}</button>`).join('')}
+      </div>
+      <div id="cohort-panel" class="cohort-panel" aria-live="polite"></div>
+      <p class="mobility-footnote">${esc(explorer.mobilityNote)}</p>
+    `;
+  };
+
+  const profileRow = (label, value, strongest=false) => `
+    <div class="profile-row ${strongest ? 'strongest' : ''}">
+      <span>${esc(label)}</span>
+      <div class="profile-track"><i style="width:${value}%"></i></div>
+      <strong>${value}%</strong>
+    </div>`;
+
+  const renderGroup = (key) => {
+    const g = explorer.groups[key];
+    const p = g.profile;
+    const values = Object.values(p);
+    const maxVal = Math.max(...values);
+    const labels = { reading:'Reading', writing:'Writing', maths:'Mathematics', combined:'R/W/M combined' };
+    const panel = document.querySelector('#cohort-panel');
+    panel.innerHTML = `
+      <div class="cohort-summary-grid">
+        <div class="cohort-summary-main">
+          <span class="cohort-kicker">2026 cohort</span>
+          <h3>${esc(g.label)}</h3>
+          <div class="cohort-size"><span aria-hidden="true">●●●</span><strong>${g.cohort}</strong><small>pupils</small></div>
+          <p class="cohort-headline">${esc(g.headline)}</p>
+          <p>${esc(g.commentary)}</p>
+        </div>
+        <div class="cohort-profile-card">
+          <div class="profile-title"><strong>2026 strength profile</strong><span>expected standard+</span></div>
+          ${Object.entries(p).map(([k,v]) => profileRow(labels[k], v, v===maxVal)).join('')}
+        </div>
+      </div>
+      <div class="cohort-trend-card">
+        <div class="trend-head">
+          <div><span class="story-label">Three-year combined trend</span><h4>Reading, writing & mathematics combined</h4></div>
+          <span class="trend-note">Cohort size shown for each year</span>
+        </div>
+        <div class="cohort-trend-grid">
+          ${data.years.map((year,i) => `
+            <div class="cohort-year">
+              <span>${year}</span>
+              <strong>${g.combinedTrend[i]}%</strong>
+              <small>${g.cohortTrend[i]} pupils</small>
+            </div>`).join('')}
+        </div>
+      </div>
+      <div class="why-matters">
+        <span class="script-label">Why does this matter?</span>
+        <p>Percentages are easier to interpret when you can see who is included. The cohort size is always shown here so that a group of three pupils is not read in the same way as a cohort of forty.</p>
+      </div>
+    `;
+  };
+
+  renderExplorerShell();
+  renderGroup(groupEntries[0][0]);
+  explorerEl.addEventListener('click', (e) => {
+    const btn = e.target.closest('.cohort-chip');
+    if (!btn) return;
+    explorerEl.querySelectorAll('.cohort-chip').forEach(b => {
+      b.classList.toggle('active', b === btn);
+      b.setAttribute('aria-selected', b === btn ? 'true' : 'false');
+    });
+    renderGroup(btn.dataset.group);
   });
 
   const observer = new IntersectionObserver((entries) => {

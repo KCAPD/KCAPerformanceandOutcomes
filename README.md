@@ -1,21 +1,34 @@
-# KCA Performance & Outcomes — Build 1
+# KCA Performance & Outcomes — Build 2
 
-Static, mobile-first microsite for King's Cross Academy.
+A mobile-first interactive performance report for King's Cross Academy.
 
-## Files
+## What's new in Build 2
+
+- Stronger parent-facing editorial story at the top of the site.
+- A mobile-first **Explore our community** KS2 cohort selector.
+- Cohort views for:
+  - All pupils
+  - Disadvantaged pupils
+  - SEND pupils
+  - Pupils on roll after September of Year 1
+  - Camden's "2 year mobility" group (working public label: "Joined in the final two years")
+- Every filtered result shows the **sample size** prominently.
+- Each cohort view shows a 2026 Reading / Writing / Mathematics / Combined strength profile.
+- Each cohort view also shows the **three-year combined trend and cohort size**.
+- Provisional-data messaging remains prominent, including the current KS2 disapplication caveat.
+
+## Important data notes before publication
+
+1. 2026 data remains provisional until final validation/publication in November 2026.
+2. The KS2 cohort may change following confirmed disapplications.
+3. Camden calls one mobility category **"2 year mobility"**. Confirm the precise Camden definition before publishing the friendlier label "Joined in the final two years".
+4. The uploaded statutory summary and Camden MTC booklet contain different 2026 full-mark figures (38% vs 33%). Build 2 uses the Camden MTC booklet's 33% and flags the discrepancy in the page note so it can be resolved before publication.
+
+## File structure
+
 - `index.html`
 - `styles.css`
-- `data.js` — all headline figures live here so future updates are simple
 - `script.js`
+- `data.js`
 
-## Publishing
-Upload all files to the root of a GitHub repository and enable GitHub Pages from the `main` branch / root.
-
-## Updating November 2026 data
-Update the values in `data.js` only. The layout, three-year cards and 2026 comparison bars are generated automatically.
-
-## Provisional wording
-The public build deliberately states that 2026 data is provisional. KS2 also notes that confirmed disapplications and cohort validation may change the final outcomes.
-
-## Data note
-Build 1 uses the figures from the user's current `Statutory data summary 2026.pdf` as the primary public-facing dataset, supplemented by the Camden analysis packs for narrative/context. Where 2026 comparator data is not final/available, the interface shows `TBC` rather than guessing.
+All site content is static and can be published directly with GitHub Pages.
