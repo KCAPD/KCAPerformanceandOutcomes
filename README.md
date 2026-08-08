@@ -48,7 +48,7 @@ All site content is static and can be published directly with GitHub Pages.
 
 
 ## Build 8 commentary pass
-Final pre-autumn-data commentary pass: section-specific Headteacher commentary headlines, parent-facing narrative, and Headteacher sign-off. Data architecture remains unchanged from Build 7.
+Final pre-autumn-data commentary pass: section-specific Headteacher commentary headlines and parent-facing narrative. Personal Headteacher sign-off removed.
 
 
 ## Build 9 commentary/data presentation refinements
