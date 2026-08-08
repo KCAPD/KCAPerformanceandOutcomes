@@ -64,3 +64,7 @@ Final pre-autumn-data commentary pass: section-specific Headteacher commentary h
 - Phonics offers All pupils / SEND / Disadvantaged views using the current internal pupil-level phonics record; subgroup figures are explicitly marked for refresh at final validation.
 - MTC offers All pupils / Disadvantaged views. No SEND figure is inferred because the current MTC source pack does not provide one.
 - Removes the Headteacher's personal name/sign-off from commentary panels.
+
+
+## Build 10b
+EYFS, Phonics and MTC pupil-group toggles now use the same button styling and active-state treatment as the KS2 cohort explorer at the bottom of the page.

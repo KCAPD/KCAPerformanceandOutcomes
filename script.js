@@ -90,12 +90,22 @@
     return `<div class="phase-explorer" data-phase-explorer="${esc(sectionId)}">
       <div class="phase-explorer-head">
         <div><span class="story-label">Explore outcomes for</span><p>${esc(explorer.intro || '')}</p></div>
-        <div class="phase-picker" role="tablist" aria-label="Choose a pupil group">
-          ${groups.map(([key,g],i)=>`<button class="phase-chip ${i===0?'active':''}" role="tab" aria-selected="${i===0?'true':'false'}" data-phase-group="${esc(key)}">${esc(g.short || g.label)}</button>`).join('')}
+        <div class="phase-picker cohort-picker" role="tablist" aria-label="Choose a pupil group">
+          ${groups.map(([key,g],i)=>`<button class="phase-chip cohort-chip ${i===0?'active':''}" role="tab" aria-selected="${i===0?'true':'false'}" data-phase-group="${esc(key)}">${esc(g.short || g.label)}</button>`).join('')}
         </div>
       </div>
       <div class="phase-panel" aria-live="polite"></div>
       ${explorer.unavailableNote ? `<p class="phase-unavailable">${esc(explorer.unavailableNote)}</p>` : ''}
+    </div>`;
+  };
+
+  const phaseMetricRow = (m) => {
+    const isPercent = (m.unit || '') === '%';
+    const width = isPercent ? Math.max(0, Math.min(100, Number(m.value) || 0)) : Math.max(0, Math.min(100, ((Number(m.value) || 0) / 25) * 100));
+    return `<div class="profile-row phase-profile-row">
+      <span>${esc(m.label)}</span>
+      <div class="profile-track"><i style="width:${width}%"></i></div>
+      <strong>${fmt(m.value,m.unit || '')}</strong>
     </div>`;
   };
 
@@ -104,10 +114,24 @@
     const all = explorer.groups.all || g;
     const pct = all.cohort ? Math.round((g.cohort / all.cohort) * 100) : null;
     const panel = root.querySelector('.phase-panel');
-    panel.innerHTML = `<div class="phase-summary">
-      <div class="phase-group-meta"><span>2026 cohort</span><h3>${esc(g.label)}</h3><p><strong>${g.cohort}</strong> pupils${pct !== null ? ` · ${pct}% of cohort` : ''}</p></div>
-      <div class="phase-metrics">${g.metrics.map(m=>`<div class="phase-metric"><span>${esc(m.label)}</span><strong>${fmt(m.value,m.unit || '')}</strong></div>`).join('')}</div>
-    </div>${g.note ? `<p class="phase-note">${esc(g.note)}</p>` : ''}`;
+    panel.classList.add('cohort-panel');
+    panel.innerHTML = `
+      <div class="cohort-summary-grid phase-cohort-summary-grid">
+        <div class="cohort-summary-main">
+          <span class="cohort-kicker">2026 cohort</span>
+          <h3>${esc(g.label)}</h3>
+          <div class="cohort-size"><span aria-hidden="true">●●●</span><strong>${g.cohort}</strong><small>pupils${pct !== null ? ` · ${pct}% of cohort` : ''}</small></div>
+          ${g.note ? `<p>${esc(g.note)}</p>` : ''}
+        </div>
+        <div class="cohort-profile-card">
+          <div class="profile-title"><strong>2026 outcome profile</strong><span>selected pupil group</span></div>
+          ${g.metrics.map(phaseMetricRow).join('')}
+        </div>
+      </div>
+      <div class="why-matters phase-why-matters">
+        <span class="script-label">Why does cohort size matter?</span>
+        <p>Percentages are shown alongside the number of pupils so that outcomes for smaller groups can be read in the right context.</p>
+      </div>`;
   };
 
   const scaledCard = (s, idx) => `

@@ -112,3 +112,21 @@
 .phase-note,.phase-unavailable{font-size:.75rem;color:var(--muted);margin:11px 2px 0;line-height:1.45}.phase-unavailable{padding-top:10px;border-top:1px solid var(--line)}
 @media(min-width:700px){.phase-explorer{padding:22px}.phase-explorer-head{grid-template-columns:1fr auto;align-items:end}.phase-picker{justify-content:flex-end}.phase-summary{grid-template-columns:minmax(190px,.65fr) minmax(0,1.35fr);align-items:center}.phase-panel{padding:18px}}
 @media(max-width:430px){.phase-explorer{padding:14px;border-radius:18px}.phase-chip{font-size:.74rem;padding:9px 11px}.phase-panel{padding:13px}.phase-metric strong{font-size:1.45rem}.phase-metrics{grid-template-columns:1fr 1fr}}
+
+/* Build 10b: match phase explorer controls to the KS2 cohort explorer */
+.phase-picker.cohort-picker{margin:0;padding:4px 0 12px}
+.phase-chip.cohort-chip{font-size:.82rem;padding:11px 14px;border-radius:999px}
+.phase-chip.cohort-chip.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+@media(max-width:430px){.phase-chip.cohort-chip{padding:10px 12px;font-size:.78rem}}
+
+
+/* Build 10c: phase explorers use the same full data-panel language as KS2 */
+.phase-explorer{background:transparent;border:0;box-shadow:none;padding:0;margin:0 0 28px}
+.phase-explorer-head{margin-bottom:4px}
+.phase-panel.cohort-panel{margin-top:0}
+.phase-cohort-summary-grid .cohort-summary-main>p:last-child{color:var(--muted)}
+.phase-profile-row{grid-template-columns:minmax(130px,1.25fr) minmax(90px,1fr) minmax(58px,auto)}
+.phase-profile-row>strong{white-space:nowrap}
+.phase-why-matters{margin-top:18px}
+.phase-unavailable{margin:10px 4px 0;font-size:.76rem;color:var(--muted)}
+@media(max-width:430px){.phase-profile-row{grid-template-columns:minmax(105px,1.2fr) minmax(70px,1fr) minmax(54px,auto)}.phase-explorer-head{margin-bottom:0}}
