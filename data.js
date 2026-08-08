@@ -7,6 +7,16 @@ window.KCA_DATA = {
     { value: "49%", label: "Disadvantaged pupils*", meta: "205 pupils · September 2026", note: "A Department for Education reporting category — not a KCA label" },
     { value: "50", label: "Home languages spoken", meta: "School context · September 2026", note: "Reflecting the rich linguistic diversity of our Academy community" }
   ],
+  trendHighlights: [
+    { label: "EYFS GLD", values: [70, 71, 77], unit: "%", change: "+7pp", note: "Good Level of Development" },
+    { label: "Phonics by end of Y2", values: [90, 91, 93], unit: "%", change: "+3pp", note: "Expected standard" },
+    { label: "KS2 Reading", values: [62, 78, 80], unit: "%", change: "+18pp", note: "Expected standard" },
+    { label: "KS2 Writing", values: [65, 76, 78], unit: "%", change: "+13pp", note: "Expected standard" },
+    { label: "KS2 Mathematics", values: [56, 56, 78], unit: "%", change: "+22pp", note: "Expected standard" },
+    { label: "KS2 Combined", values: [44, 52, 73], unit: "%", change: "+29pp", note: "Reading, writing & maths" },
+    { label: "Swimming & water safety", values: [85, 87, 92], unit: "%", change: "+7pp", note: "Pupils meeting the outcome" },
+    { label: "LAMDA", values: [100, 100, 100], unit: "%", change: "100%", note: "Pass rate sustained for 3 years", sustained: true }
+  ],
   familyStory: [
     {
       title: "A strong start",
@@ -36,7 +46,6 @@ window.KCA_DATA = {
           name: "Good Level of Development",
           unit: "%",
           school: [70, 71, 77],
-          camden: [70, 70, 73],
           national: [67, 67, null],
           note: "2026 national figure not yet available in the current statutory summary."
         }
@@ -53,7 +62,6 @@ window.KCA_DATA = {
           name: "Year 1 meeting the expected standard",
           unit: "%",
           school: [91, 91, 78],
-          camden: [84, 84, 85],
           national: [79, 80, null],
           note: "2026 national figure not yet available in the current summary."
         },
@@ -61,7 +69,6 @@ window.KCA_DATA = {
           name: "Year 2 meeting the expected standard",
           unit: "%",
           school: [90, 91, 93],
-          camden: [90, 90, 90],
           national: [89, 89, null],
           note: "Shows the cumulative position after the Year 2 re-check."
         }
@@ -72,21 +79,19 @@ window.KCA_DATA = {
       kicker: "04 · Multiplication Tables Check",
       title: "Fluency that supports later mathematics.",
       intro: "The Year 4 Multiplication Tables Check is an online assessment of pupils' recall of multiplication facts. The maximum score is 25.",
-      story: "The average score remains above 21. Camden's provisional 2026 analysis is stronger overall, so our focus is on strengthening automatic recall while retaining a broad mathematics curriculum.",
+      story: "The average score remains above 21. Our focus is on strengthening automatic recall while retaining a broad mathematics curriculum and ensuring more pupils reach full marks.",
       measures: [
         {
           name: "Pupils achieving full marks",
           unit: "%",
           school: [38, 44, 33],
-          camden: [42, 44, 52],
           national: [34, 37, null],
-          note: "2026 values use Camden's provisional MTC analysis. The school's earlier summary contains a different 2026 full-marks figure, so this should be checked before final publication."
+          note: "The current provisional source gives 33% achieving full marks in 2026. The school's earlier summary contains a different figure, so this should be checked before final publication."
         },
         {
           name: "Average mark",
           unit: " / 25",
           school: [21.0, 21.8, 21.1],
-          camden: [21.9, 22.3, 22.8],
           national: [20.6, 21.0, null],
           note: "Average score of pupils taking the check."
         }
@@ -100,19 +105,19 @@ window.KCA_DATA = {
       story: "The strongest 2026 KS2 story is the improvement at expected standard: 80% in reading, 78% in writing, 78% in mathematics and 73% combined. The current national figures are 75%, 73%, 75% and 63% respectively.",
       provisionalExtra: "KS2 is particularly provisional: current outcomes may change following confirmed disapplications, including two pupils currently being considered for disapplication, and final cohort validation.",
       measures: [
-        { name: "Reading · expected standard", unit: "%", school: [62,78,80], camden: [82,83,84], national: [74,76,75], note: "2026 Camden and national figures are provisional in the July KS2 analysis." },
-        { name: "Writing · expected standard", unit: "%", school: [65,76,78], camden: [79,78,80], national: [72,73,73], note: "Writing is teacher assessed." },
-        { name: "Mathematics · expected standard", unit: "%", school: [56,56,78], camden: [82,81,84], national: [73,75,75], note: "A notable improvement in the school's three-year trend." },
-        { name: "Reading, writing & maths · combined", unit: "%", school: [44,52,73], camden: [72,73,76], national: [61,62,63], note: "The key combined KS2 measure." },
-        { name: "Reading · higher standard", unit: "%", school: [15,39,30], camden: [36,42,40], national: [29,34,31], note: "Higher standard = scaled score of 110+ in reading." },
-        { name: "Writing · greater depth", unit: "%", school: [6,11,3], camden: [20,20,22], national: [13,13,13], note: "Greater depth is based on teacher assessment." },
-        { name: "Mathematics · higher standard", unit: "%", school: [13,19,28], camden: [33,37,38], national: [24,27,27], note: "Higher standard = scaled score of 110+ in mathematics." },
-        { name: "Combined · higher standard", unit: "%", school: [2,7,3], camden: [13,15,16], national: [8,8,9], note: "Requires higher-standard outcomes across reading, writing and mathematics." }
+        { name: "Reading · expected standard", unit: "%", school: [62,78,80], national: [74,76,75], note: "2026 national figures are provisional in the July KS2 analysis." },
+        { name: "Writing · expected standard", unit: "%", school: [65,76,78], national: [72,73,73], note: "Writing is teacher assessed." },
+        { name: "Mathematics · expected standard", unit: "%", school: [56,56,78], national: [73,75,75], note: "A notable improvement in the school's three-year trend." },
+        { name: "Reading, writing & maths · combined", unit: "%", school: [44,52,73], national: [61,62,63], note: "The key combined KS2 measure." },
+        { name: "Reading · higher standard", unit: "%", school: [15,39,30], national: [29,34,31], note: "Higher standard = scaled score of 110+ in reading." },
+        { name: "Writing · greater depth", unit: "%", school: [6,11,3], national: [13,13,13], note: "Greater depth is based on teacher assessment." },
+        { name: "Mathematics · higher standard", unit: "%", school: [13,19,28], national: [24,27,27], note: "Higher standard = scaled score of 110+ in mathematics." },
+        { name: "Combined · higher standard", unit: "%", school: [2,7,3], national: [8,8,9], note: "Requires higher-standard outcomes across reading, writing and mathematics." }
       ],
       scaled: [
-        { name: "Reading", school: [102.7,106.0,105.9], camden: [107.1,107.6,108.0], national: [105,106,106] },
-        { name: "Mathematics", school: [99.6,101.8,105.2], camden: [106.5,107.0,107.5], national: [104,105,105] },
-        { name: "Grammar, punctuation & spelling", school: [101.6,104.2,105.7], camden: [107.6,107.8,108.2], national: [105,105,105] }
+        { name: "Reading", school: [102.7,106.0,105.9], national: [105,106,106] },
+        { name: "Mathematics", school: [99.6,101.8,105.2], national: [104,105,105] },
+        { name: "Grammar, punctuation & spelling", school: [101.6,104.2,105.7], national: [105,105,105] }
       ],
       commentary: "The expected-standard picture is encouraging, particularly in mathematics and the combined measure. Higher-standard outcomes are more mixed and remain an important next step. The group explorer below allows families to see how different cohorts contribute to the overall picture rather than relying on a single school average."
     }
@@ -159,7 +164,7 @@ window.KCA_DATA = {
         combinedTrend: [32,32,78],
         cohortTrend: [22,25,18],
         headline: "Strong outcomes for pupils who joined later",
-        commentary: "The Camden analysis defines this group as pupils who were on roll after September of Year 1. In 2026, this group achieved 78% combined and 83% in reading — a strong outcome for pupils who did not experience their entire primary journey at KCA."
+        commentary: "The source analysis defines this group as pupils who were on roll after September of Year 1. In 2026, this group achieved 78% combined and 83% in reading — a strong outcome for pupils who did not experience their entire primary journey at KCA."
       },
       finalTwoYears: {
         label: "Joined in the final two years*",
@@ -169,9 +174,9 @@ window.KCA_DATA = {
         combinedTrend: [0,20,100],
         cohortTrend: [2,10,3],
         headline: "A very small cohort — interpret with care",
-        commentary: "Camden labels this category '2 year mobility'. The 2026 group contains only three pupils, so percentages move dramatically with each child and should not be treated as a school-wide trend."
+        commentary: "The source report labels this category '2 year mobility'. The 2026 group contains only three pupils, so percentages move dramatically with each child and should not be treated as a school-wide trend."
       }
     },
-    mobilityNote: "*Working label. Camden's report calls this category '2 year mobility'. Confirm the precise local definition before the public version is published."
+    mobilityNote: "*Working label. The source report calls this category '2 year mobility'. Confirm the precise local definition before the public version is published."
   }
 };

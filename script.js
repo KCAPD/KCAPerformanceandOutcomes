@@ -31,17 +31,39 @@
       <p>${esc(h.note)}</p>
     </article>`).join('');
 
+  const trendGrid = document.querySelector('#trend-highlight-grid');
+  if (trendGrid && data.trendHighlights) {
+    trendGrid.innerHTML = data.trendHighlights.map((t, i) => {
+      const vals = t.values;
+      const min = Math.min(...vals), max = Math.max(...vals);
+      const range = Math.max(1, max - min);
+      const pts = vals.map((v, idx) => {
+        const x = 8 + idx * 42;
+        const y = t.sustained ? 21 : 36 - ((v - min) / range) * 28;
+        return `${x},${y}`;
+      }).join(' ');
+      return `<article class="trend-highlight-card reveal ${t.sustained ? 'sustained' : ''}" style="--delay:${i * 45}ms">
+        <div class="trend-card-top"><span>${esc(t.label)}</span><strong>${esc(t.change)}</strong></div>
+        <svg class="mini-spark" viewBox="0 0 100 44" role="img" aria-label="${esc(t.label)}: ${vals[0]}${esc(t.unit)} in 2024, ${vals[1]}${esc(t.unit)} in 2025, ${vals[2]}${esc(t.unit)} in 2026">
+          <polyline points="${pts}"></polyline>
+          ${vals.map((v, idx) => { const x=8+idx*42; const y=t.sustained?21:36-((v-min)/range)*28; return `<circle cx="${x}" cy="${y}" r="3.2"></circle>`; }).join('')}
+        </svg>
+        <div class="trend-values"><span>2024 <b>${vals[0]}${esc(t.unit)}</b></span><span>2026 <b>${vals[2]}${esc(t.unit)}</b></span></div>
+        <p>${esc(t.note)}</p>
+      </article>`;
+    }).join('');
+  }
+
   const comparatorRows = (m) => data.years.map((year, i) => `
     <div class="year-card">
       <div class="year-label">${year}</div>
       <div class="year-value school-value"><span>KCA</span><strong>${fmt(m.school[i], m.unit)}</strong></div>
-      <div class="year-value"><span>Camden</span><strong>${fmt(m.camden[i], m.unit)}</strong></div>
       <div class="year-value"><span>National</span><strong>${fmt(m.national[i], m.unit)}</strong></div>
     </div>`).join('');
 
   const barRows = (m) => {
     const latest = [
-      ['KCA', m.school[2], 'school'], ['Camden', m.camden[2], ''], ['National', m.national[2], '']
+      ['KCA', m.school[2], 'school'], ['National', m.national[2], '']
     ];
     const max = m.unit.includes('/ 25') ? 25 : 100;
     return `<div class="latest-bars" aria-label="2026 comparison">
@@ -69,7 +91,6 @@
         <div class="year-card">
           <div class="year-label">${year}</div>
           <div class="year-value school-value"><span>KCA</span><strong>${fmt(s.school[i])}</strong></div>
-          <div class="year-value"><span>Camden</span><strong>${fmt(s.camden[i])}</strong></div>
           <div class="year-value"><span>National</span><strong>${fmt(s.national[i])}</strong></div>
         </div>`).join('')}</div>
     </article>`;

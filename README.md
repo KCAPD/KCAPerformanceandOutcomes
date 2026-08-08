@@ -32,3 +32,9 @@ A mobile-first interactive performance report for King's Cross Academy.
 - `data.js`
 
 All site content is static and can be published directly with GitHub Pages.
+
+
+## Build 6 changes
+- Added a mobile-first three-year direction graphic highlighting seven improving key outcomes and sustained 100% LAMDA performance.
+- Removed Camden averages from all public statutory comparison views; charts now focus on KCA and national data.
+- Retained Camden-derived internal cohort analysis where it provides the source data, without presenting Camden as a comparator.
