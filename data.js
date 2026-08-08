@@ -27,7 +27,7 @@ window.KCA_DATA = {
       title: "An inclusive school",
       value: "22",
       suffix: "SEND pupils in the 2026 KS2 cohort",
-      copy: "We are ambitious for pupils with additional needs and make their outcomes visible rather than hiding them inside an overall average."
+      copy: "We are ambitious for every child, with high expectations for pupils with SEND at the heart of our inclusive approach."
     },
     {
       title: "The full picture matters",
