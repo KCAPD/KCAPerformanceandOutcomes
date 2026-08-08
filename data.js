@@ -41,6 +41,14 @@ window.KCA_DATA = {
       title: "A strong start to school.",
       intro: "At the end of Reception, children are assessed against the Early Learning Goals. A Good Level of Development (GLD) indicates that a child has met the expected standard across the prime areas of learning and literacy and mathematics.",
       story: "In 2026, 77% of Reception pupils achieved a Good Level of Development. The three-year trend shows improvement from 70% in 2024 to 77% in 2026.",
+      explorer: {
+        intro: "Explore the 2026 EYFS outcome for different groups. Cohort sizes are shown so that percentages can be read in context.",
+        groups: {
+          all: { label: "All pupils", short: "All pupils", cohort: 60, metrics: [{ label: "Good Level of Development", value: 77, unit: "%" }], note: "Whole Reception cohort." },
+          send: { label: "Pupils with SEND", short: "SEND", cohort: 19, metrics: [{ label: "Good Level of Development", value: 53, unit: "%" }], note: "The EYFS source records 17 pupils at SEN Support and 2 pupils with an EHCP. The combined GLD figure is calculated from those source counts." },
+          disadvantaged: { label: "Disadvantaged pupils", short: "Disadvantaged*", cohort: 26, metrics: [{ label: "Good Level of Development", value: 69, unit: "%" }], note: "‘Disadvantaged’ is the Department for Education reporting category used in the source data, not a KCA label." }
+        }
+      },
       measures: [
         {
           name: "Good Level of Development",
@@ -58,6 +66,14 @@ window.KCA_DATA = {
       title: "Building fluent early readers.",
       intro: "The Year 1 Phonics Screening Check assesses whether pupils can decode a mixture of real words and pseudo-words. Pupils who do not meet the standard in Year 1 are checked again in Year 2.",
       story: "Year 1 outcomes are lower in 2026 than in the previous two years, while the Year 2 re-check shows a strong cumulative picture. This is an area where the trend matters more than a single headline.",
+      explorer: {
+        intro: "Explore the current 2026 Year 1 phonics picture by pupil group. These subgroup figures are drawn from the Academy's current pupil-level phonics record and will be refreshed when the final validated dataset is available.",
+        groups: {
+          all: { label: "All pupils", short: "All pupils", cohort: 58, metrics: [{ label: "Meeting the expected standard", value: 78, unit: "%" }], note: "The published provisional headline remains 78%." },
+          send: { label: "Pupils with SEND", short: "SEND", cohort: 11, metrics: [{ label: "Recorded as meeting the standard", value: 36, unit: "%" }], note: "Current internal pupil-level record; this figure will be refreshed against the final validated phonics dataset." },
+          disadvantaged: { label: "Disadvantaged pupils", short: "Disadvantaged*", cohort: 25, metrics: [{ label: "Recorded as meeting the standard", value: 76, unit: "%" }], note: "Current internal pupil-level record. ‘Disadvantaged’ is the Department for Education reporting category, not a KCA label." }
+        }
+      },
       measures: [
         {
           name: "Year 1 meeting the expected standard",
@@ -82,6 +98,14 @@ window.KCA_DATA = {
       title: "Fluency that supports later mathematics.",
       intro: "The Year 4 Multiplication Tables Check is an online assessment of pupils' recall of multiplication facts. The maximum score is 25.",
       story: "The average score remains above 21. Our focus is on strengthening automatic recall while retaining a broad mathematics curriculum and ensuring more pupils reach full marks.",
+      explorer: {
+        intro: "Explore the 2026 MTC outcome by the pupil groups available in the current source pack.",
+        groups: {
+          all: { label: "All pupils", short: "All pupils", cohort: 57, metrics: [{ label: "Average mark", value: 21.1, unit: " / 25" }, { label: "Full marks (25/25)", value: 34, unit: "%" }], note: "34% is the Academy-confirmed final full-marks figure." },
+          disadvantaged: { label: "Disadvantaged pupils", short: "Disadvantaged*", cohort: 42, metrics: [{ label: "Average mark", value: 21.2, unit: " / 25" }, { label: "Full marks (25/25)", value: 33, unit: "%" }], note: "The detailed MTC pack provides this disadvantaged breakdown. ‘Disadvantaged’ is a Department for Education reporting category, not a KCA label." }
+        },
+        unavailableNote: "The current MTC source pack does not provide a SEND breakdown, so we have not estimated or inferred one."
+      },
       measures: [
         {
           name: "Pupils achieving full marks",

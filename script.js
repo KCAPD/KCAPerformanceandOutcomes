@@ -84,6 +84,32 @@
       ${m.note ? `<p class="measure-note">${esc(m.note)}</p>` : ''}
     </article>`;
 
+  const sectionExplorerShell = (sectionId, explorer) => {
+    if (!explorer || !explorer.groups) return '';
+    const groups = Object.entries(explorer.groups);
+    return `<div class="phase-explorer" data-phase-explorer="${esc(sectionId)}">
+      <div class="phase-explorer-head">
+        <div><span class="story-label">Explore outcomes for</span><p>${esc(explorer.intro || '')}</p></div>
+        <div class="phase-picker" role="tablist" aria-label="Choose a pupil group">
+          ${groups.map(([key,g],i)=>`<button class="phase-chip ${i===0?'active':''}" role="tab" aria-selected="${i===0?'true':'false'}" data-phase-group="${esc(key)}">${esc(g.short || g.label)}</button>`).join('')}
+        </div>
+      </div>
+      <div class="phase-panel" aria-live="polite"></div>
+      ${explorer.unavailableNote ? `<p class="phase-unavailable">${esc(explorer.unavailableNote)}</p>` : ''}
+    </div>`;
+  };
+
+  const renderPhaseGroup = (root, explorer, key) => {
+    const g = explorer.groups[key];
+    const all = explorer.groups.all || g;
+    const pct = all.cohort ? Math.round((g.cohort / all.cohort) * 100) : null;
+    const panel = root.querySelector('.phase-panel');
+    panel.innerHTML = `<div class="phase-summary">
+      <div class="phase-group-meta"><span>2026 cohort</span><h3>${esc(g.label)}</h3><p><strong>${g.cohort}</strong> pupils${pct !== null ? ` · ${pct}% of cohort` : ''}</p></div>
+      <div class="phase-metrics">${g.metrics.map(m=>`<div class="phase-metric"><span>${esc(m.label)}</span><strong>${fmt(m.value,m.unit || '')}</strong></div>`).join('')}</div>
+    </div>${g.note ? `<p class="phase-note">${esc(g.note)}</p>` : ''}`;
+  };
+
   const scaledCard = (s, idx) => `
     <article class="measure-card compact reveal" style="--delay:${idx * 45}ms">
       <div class="measure-head"><h3>${esc(s.name)} · average scaled score</h3><span>100 = expected standard</span></div>
@@ -109,13 +135,31 @@
           <p>${esc(section.story)}</p>
           ${section.provisionalExtra ? `<div class="mini-warning">${esc(section.provisionalExtra)}</div>` : ''}
         </div>
+        ${sectionExplorerShell(id, section.explorer)}
         <div class="measure-grid">${section.measures.map(measureCard).join('')}</div>
         ${section.scaled ? `<div class="subheading"><span>Average scaled scores</span><h3>Another way to read attainment at KS2</h3></div><div class="measure-grid scaled-grid">${section.scaled.map(scaledCard).join('')}</div>` : ''}
         <details class="commentary reveal">
           <summary><span>${esc(section.commentaryTitle || 'Headteacher commentary')}</span><span aria-hidden="true">+</span></summary>
-          <div><p>${esc(section.commentary)}</p><p class="commentary-signoff"><strong>Stephen Mitchell</strong><br>Headteacher</p></div>
+          <div><p>${esc(section.commentary)}</p></div>
         </details>
       </div>`;
+  });
+
+  document.querySelectorAll('[data-phase-explorer]').forEach(root => {
+    const id = root.dataset.phaseExplorer;
+    const explorer = data.sections[id] && data.sections[id].explorer;
+    if (!explorer) return;
+    const first = Object.keys(explorer.groups)[0];
+    renderPhaseGroup(root, explorer, first);
+    root.addEventListener('click', e => {
+      const btn = e.target.closest('.phase-chip');
+      if (!btn) return;
+      root.querySelectorAll('.phase-chip').forEach(b => {
+        b.classList.toggle('active', b === btn);
+        b.setAttribute('aria-selected', b === btn ? 'true' : 'false');
+      });
+      renderPhaseGroup(root, explorer, btn.dataset.phaseGroup);
+    });
   });
 
   const explorer = data.ks2Explorer;

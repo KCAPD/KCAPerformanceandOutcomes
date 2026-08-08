@@ -99,3 +99,16 @@
   .trend-values b{font-size:.9rem}
   .trend-highlight-card p{font-size:.74rem}
 }
+
+/* Build 10: phase-level SEND / disadvantaged cohort explorers */
+.phase-explorer{margin:0 0 24px;background:#f8fbfd;border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:0 8px 24px rgba(27,36,48,.035)}
+.phase-explorer-head{display:grid;gap:14px;margin-bottom:14px}.phase-explorer-head p{margin:5px 0 0;color:var(--muted);font-size:.86rem;max-width:700px}
+.phase-picker{display:flex;gap:8px;overflow-x:auto;padding:2px 0 4px;scrollbar-width:none}.phase-picker::-webkit-scrollbar{display:none}
+.phase-chip{appearance:none;border:1px solid var(--line);background:#fff;color:var(--ink);font:inherit;font-size:.8rem;font-weight:800;padding:10px 13px;border-radius:999px;white-space:nowrap;cursor:pointer}
+.phase-chip.active{background:var(--ink);border-color:var(--ink);color:#fff}
+.phase-panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:15px}
+.phase-summary{display:grid;gap:15px}.phase-group-meta>span{font-size:.68rem;text-transform:uppercase;letter-spacing:.09em;font-weight:800;color:var(--blue-deep)}.phase-group-meta h3{margin:4px 0 4px;font-size:1.25rem}.phase-group-meta p{margin:0;color:var(--muted);font-size:.8rem}.phase-group-meta p strong{font-size:1.1rem;color:var(--navy)}
+.phase-metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px}.phase-metric{background:#f7fafc;border:1px solid var(--line);border-radius:15px;padding:12px}.phase-metric span{display:block;color:var(--muted);font-size:.72rem;font-weight:700;line-height:1.25}.phase-metric strong{display:block;margin-top:7px;color:var(--blue-deep);font-size:1.65rem;line-height:1}
+.phase-note,.phase-unavailable{font-size:.75rem;color:var(--muted);margin:11px 2px 0;line-height:1.45}.phase-unavailable{padding-top:10px;border-top:1px solid var(--line)}
+@media(min-width:700px){.phase-explorer{padding:22px}.phase-explorer-head{grid-template-columns:1fr auto;align-items:end}.phase-picker{justify-content:flex-end}.phase-summary{grid-template-columns:minmax(190px,.65fr) minmax(0,1.35fr);align-items:center}.phase-panel{padding:18px}}
+@media(max-width:430px){.phase-explorer{padding:14px;border-radius:18px}.phase-chip{font-size:.74rem;padding:9px 11px}.phase-panel{padding:13px}.phase-metric strong{font-size:1.45rem}.phase-metrics{grid-template-columns:1fr 1fr}}

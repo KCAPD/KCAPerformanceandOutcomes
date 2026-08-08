@@ -57,3 +57,10 @@ Final pre-autumn-data commentary pass: section-specific Headteacher commentary h
 - MTC commentary highlights that 68% scored above 22/25 and explains how the check informs Year 5 teaching and intervention.
 - KS2 commentary identifies greater-depth writing as a 2026/27 school-improvement focus.
 - Cohort explorer now shows each selected group as both a pupil count and a percentage of the 40-pupil 2026 KS2 cohort. Group categories can overlap.
+
+## Build 10 changes
+- Adds 2026 cohort explorers to EYFS, Phonics and MTC where source data supports them.
+- EYFS offers All pupils / SEND / Disadvantaged views with cohort sizes.
+- Phonics offers All pupils / SEND / Disadvantaged views using the current internal pupil-level phonics record; subgroup figures are explicitly marked for refresh at final validation.
+- MTC offers All pupils / Disadvantaged views. No SEND figure is inferred because the current MTC source pack does not provide one.
+- Removes the Headteacher's personal name/sign-off from commentary panels.
