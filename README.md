@@ -45,3 +45,7 @@ All site content is static and can be published directly with GitHub Pages.
 - Mobility label updated to **Joined since Year 5**, meaning pupils who joined from the start of Year 5 onwards.
 - KS2 SEND profile rechecked against the 17 July Camden booklet: **Reading 73%, Writing 73%, Mathematics 68%, Combined 64%**, cohort **22**.
 - Cohort strength-profile bars now use one consistent colour; colour no longer highlights the highest subject.
+
+
+## Build 8 commentary pass
+Final pre-autumn-data commentary pass: section-specific Headteacher commentary headlines, parent-facing narrative, and Headteacher sign-off. Data architecture remains unchanged from Build 7.

@@ -50,7 +50,8 @@ window.KCA_DATA = {
           note: "2026 national figure not yet available in the current statutory summary."
         }
       ],
-      commentary: "The overall GLD result is a positive 2026 headline. The wider EYFS analysis also shows particular strengths in physical development, understanding the world and expressive arts and design."
+      commentaryTitle: "A strong foundation for what comes next",
+      commentary: "We want children to leave Reception confident, curious and ready for the next stage of their learning. The improvement in Good Level of Development over the last three years is encouraging and reflects our continued focus on strong foundations across the whole Early Years curriculum."
     },
     phonics: {
       kicker: "03 · Phonics",
@@ -73,7 +74,8 @@ window.KCA_DATA = {
           note: "Shows the cumulative position after the Year 2 re-check."
         }
       ],
-      commentary: "The 2026 Year 1 result is an important area for continued focus. The Year 2 figure demonstrates that most pupils who need additional time go on to meet the standard by the end of Year 2."
+      commentaryTitle: "Keeping the whole reading journey in view",
+      commentary: "The 2026 Year 1 result is lower than we want it to be and early reading remains an important priority. At the same time, the Year 2 outcome shows that many children who need additional time go on to meet the expected standard. We will continue to focus sharply on strong phonics teaching and timely support for every child who needs it."
     },
     mtc: {
       kicker: "04 · Multiplication Tables Check",
@@ -96,7 +98,8 @@ window.KCA_DATA = {
           note: "Average score of pupils taking the check."
         }
       ],
-      commentary: "The distribution matters as well as the mean. The provisional 2026 analysis identifies pupils achieving at the very top of the scale while also showing a tail of pupils who need further fluency support."
+      commentaryTitle: "Fluency matters — and we remain ambitious",
+      commentary: "Secure multiplication facts give children greater confidence as mathematics becomes more complex. Our average score remains strong, but we want more pupils to develop truly automatic recall and reach the top of the scale. That will remain a clear focus in our mathematics teaching."
     },
     ks2: {
       kicker: "05 · Key Stage 2",
@@ -119,7 +122,8 @@ window.KCA_DATA = {
         { name: "Mathematics", school: [99.6,101.8,105.2], national: [104,105,105] },
         { name: "Grammar, punctuation & spelling", school: [101.6,104.2,105.7], national: [105,105,105] }
       ],
-      commentary: "The expected-standard picture is encouraging, particularly in mathematics and the combined measure. Higher-standard outcomes are more mixed and remain an important next step. The group explorer below allows families to see how different cohorts contribute to the overall picture rather than relying on a single school average."
+      commentaryTitle: "A strong year at the end of primary school",
+      commentary: "Our 2026 outcomes reflect the hard work of our children and staff and the sustained improvements we have made to teaching and the curriculum. Reading, writing and mathematics outcomes at the expected standard are strong, with particularly encouraging outcomes for pupils with SEND. We are proud of this progress while remaining ambitious about increasing the proportion of pupils working at the higher standard."
     }
   },
   ks2Explorer: {

@@ -112,8 +112,8 @@
         <div class="measure-grid">${section.measures.map(measureCard).join('')}</div>
         ${section.scaled ? `<div class="subheading"><span>Average scaled scores</span><h3>Another way to read attainment at KS2</h3></div><div class="measure-grid scaled-grid">${section.scaled.map(scaledCard).join('')}</div>` : ''}
         <details class="commentary reveal">
-          <summary><span>Headteacher commentary</span><span aria-hidden="true">+</span></summary>
-          <div><p>${esc(section.commentary)}</p></div>
+          <summary><span>${esc(section.commentaryTitle || 'Headteacher commentary')}</span><span aria-hidden="true">+</span></summary>
+          <div><p>${esc(section.commentary)}</p><p class="commentary-signoff"><strong>Stephen Mitchell</strong><br>Headteacher</p></div>
         </details>
       </div>`;
   });
