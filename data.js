@@ -4,7 +4,7 @@ window.KCA_DATA = {
   highlights: [
     { value: "415", label: "Pupils", meta: "School context · September 2026", note: "Learning together from Nursery to Year 6" },
     { value: "36%", label: "Pupils with SEND", meta: "School context · September 2026", note: "An inclusive school with ambitious expectations for every child" },
-    { value: "49%", label: "Disadvantaged pupils*", meta: "School context · September 2026", note: "A Department for Education reporting category — not a KCA label" },
+    { value: "49%", label: "Disadvantaged pupils*", meta: "205 pupils · September 2026", note: "A Department for Education reporting category — not a KCA label" },
     { value: "50", label: "Home languages spoken", meta: "School context · September 2026", note: "Reflecting the rich linguistic diversity of our Academy community" }
   ],
   familyStory: [
