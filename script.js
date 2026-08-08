@@ -160,7 +160,7 @@
           ${section.provisionalExtra ? `<div class="mini-warning">${esc(section.provisionalExtra)}</div>` : ''}
         </div>
         ${sectionExplorerShell(id, section.explorer)}
-        <div class="measure-grid">${section.measures.map(measureCard).join('')}</div>
+        <div class="measure-grid ${id === 'eyfs' ? 'eyfs-single-measure' : ''}">${section.measures.map(measureCard).join('')}</div>
         ${section.scaled ? `<div class="subheading"><span>Average scaled scores</span><h3>Another way to read attainment at KS2</h3></div><div class="measure-grid scaled-grid">${section.scaled.map(scaledCard).join('')}</div>` : ''}
         <details class="commentary reveal">
           <summary><span>${esc(section.commentaryTitle || 'Headteacher commentary')}</span><span aria-hidden="true">+</span></summary>

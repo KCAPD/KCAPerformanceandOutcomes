@@ -130,3 +130,12 @@
 .phase-why-matters{margin-top:18px}
 .phase-unavailable{margin:10px 4px 0;font-size:.76rem;color:var(--muted)}
 @media(max-width:430px){.phase-profile-row{grid-template-columns:minmax(105px,1.2fr) minmax(70px,1fr) minmax(54px,auto)}.phase-explorer-head{margin-bottom:0}}
+
+/* v10d: make the single EYFS statutory GLD card intentionally narrower on wider screens.
+   Other statutory sections retain their existing two-column layout. */
+@media (min-width:700px){
+  .measure-grid.eyfs-single-measure{
+    grid-template-columns:minmax(0,560px);
+    justify-content:center;
+  }
+}

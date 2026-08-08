@@ -68,3 +68,6 @@ Final pre-autumn-data commentary pass: section-specific Headteacher commentary h
 
 ## Build 10b
 EYFS, Phonics and MTC pupil-group toggles now use the same button styling and active-state treatment as the KS2 cohort explorer at the bottom of the page.
+
+
+Build 10d: centred the single EYFS GLD statutory three-year card on tablet/desktop so it visually balances with the two-column statutory layouts elsewhere. Mobile remains full-width.
