@@ -71,3 +71,6 @@ EYFS, Phonics and MTC pupil-group toggles now use the same button styling and ac
 
 
 Build 10d: centred the single EYFS GLD statutory three-year card on tablet/desktop so it visually balances with the two-column statutory layouts elsewhere. Mobile remains full-width.
+
+
+Build 10e: strengthened the section headings for EYFS GLD, Phonics, Multiplication Tables Check and Key Stage 2. Also made the single GLD statutory card explicitly 520px max-width and centred on desktop/tablet, while remaining full-width on mobile.

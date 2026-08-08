@@ -37,8 +37,8 @@ window.KCA_DATA = {
   ],
   sections: {
     eyfs: {
-      kicker: "02 · Early Years Foundation Stage",
-      title: "A strong start to school.",
+      kicker: "EARLY YEARS",
+      title: "EYFS Good Level of Development",
       intro: "At the end of Reception, children are assessed against the Early Learning Goals. A Good Level of Development (GLD) indicates that a child has met the expected standard across the prime areas of learning and literacy and mathematics.",
       story: "In 2026, 77% of Reception pupils achieved a Good Level of Development. The three-year trend shows improvement from 70% in 2024 to 77% in 2026.",
       explorer: {
@@ -62,8 +62,8 @@ window.KCA_DATA = {
       commentary: "We want children to leave Reception confident, curious and ready for the next stage of their learning. The improvement in Good Level of Development over the last three years is encouraging and reflects our continued focus on strong foundations across the whole Early Years curriculum."
     },
     phonics: {
-      kicker: "03 · Phonics",
-      title: "Building fluent early readers.",
+      kicker: "READING",
+      title: "Phonics",
       intro: "The Year 1 Phonics Screening Check assesses whether pupils can decode a mixture of real words and pseudo-words. Pupils who do not meet the standard in Year 1 are checked again in Year 2.",
       story: "Year 1 outcomes are lower in 2026 than in the previous two years, while the Year 2 re-check shows a strong cumulative picture. This is an area where the trend matters more than a single headline.",
       explorer: {
@@ -94,8 +94,8 @@ window.KCA_DATA = {
       commentary: "The 2026 Year 1 result is lower than we want it to be and early reading remains an important priority. A number of pupils were very close to meeting the threshold. These children will receive bespoke phonics teaching, carefully woven through the wider curriculum, so that gaps are addressed quickly and they are supported to meet the expected standard securely by the end of Year 2. Our strong Year 2 cumulative outcome gives us confidence in the impact of this sustained, targeted approach."
     },
     mtc: {
-      kicker: "04 · Multiplication Tables Check",
-      title: "Fluency that supports later mathematics.",
+      kicker: "MATHEMATICS",
+      title: "Multiplication Tables Check",
       intro: "The Year 4 Multiplication Tables Check is an online assessment of pupils' recall of multiplication facts. The maximum score is 25.",
       story: "The average score remains above 21. Our focus is on strengthening automatic recall while retaining a broad mathematics curriculum and ensuring more pupils reach full marks.",
       explorer: {
@@ -126,8 +126,8 @@ window.KCA_DATA = {
       commentary: "Secure multiplication facts give children greater confidence as mathematics becomes more complex. In 2026, 68% of pupils scored more than 22 marks out of 25 — an exceptionally strong level of fluency across the cohort. The Multiplication Tables Check is designed to help schools identify where pupils may benefit from further support, rather than to operate as a stand-alone measure of attainment. We will use this detailed information to target future teaching and intervention as the cohort moves into Year 5, while continuing to develop confident and fluent mathematicians."
     },
     ks2: {
-      kicker: "05 · Key Stage 2",
-      title: "Strong expected-standard outcomes in 2026.",
+      kicker: "END OF PRIMARY",
+      title: "Key Stage 2",
       intro: "At the end of Year 6, pupils are assessed in reading and mathematics through national tests and in writing through teacher assessment. The combined measure records pupils who meet the expected standard in reading, writing and mathematics.",
       story: "The strongest 2026 KS2 story is the improvement at expected standard: 80% in reading, 78% in writing, 78% in mathematics and 73% combined. The current national figures are 75%, 73%, 75% and 63% respectively.",
       provisionalExtra: "KS2 is particularly provisional: current outcomes may change following confirmed disapplications, including pupils currently being considered for disapplication, and final cohort validation.",
