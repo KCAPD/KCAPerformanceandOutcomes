@@ -74,3 +74,10 @@ Build 10d: centred the single EYFS GLD statutory three-year card on tablet/deskt
 
 
 Build 10e: strengthened the section headings for EYFS GLD, Phonics, Multiplication Tables Check and Key Stage 2. Also made the single GLD statutory card explicitly 520px max-width and centred on desktop/tablet, while remaining full-width on mobile.
+
+Build 10f verified:
+- package is FLAT: index.html, styles.css, data.js and script.js sit at the ZIP root
+- local asset query strings changed to ?v=10f to defeat stale GitHub Pages/browser caches
+- stronger dataset heading treatment retained
+- desktop EYFS GLD card forced to 520px centred width with higher-specificity CSS
+- page source contains: KCA PERFORMANCE BUILD 10F VERIFIED

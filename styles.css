@@ -183,3 +183,18 @@
     border-radius:18px;
   }
 }
+
+/* Build 10f verification: force the lone EYFS GLD statutory card to a centred single-card width on desktop. */
+@media (min-width:700px){
+  #eyfs .measure-grid.eyfs-single-measure{
+    display:block !important;
+    width:520px !important;
+    max-width:100% !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+  #eyfs .measure-grid.eyfs-single-measure > .measure-card{
+    width:100% !important;
+    box-sizing:border-box;
+  }
+}
