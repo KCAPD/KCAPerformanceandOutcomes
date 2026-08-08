@@ -11,7 +11,7 @@ A mobile-first interactive performance report for King's Cross Academy.
   - Disadvantaged pupils
   - SEND pupils
   - Pupils on roll after September of Year 1
-  - Camden's "2 year mobility" group (working public label: "Joined in the final two years")
+  - Pupils who joined from the start of Year 5 onwards (public label: "Joined since Year 5")
 - Every filtered result shows the **sample size** prominently.
 - Each cohort view shows a 2026 Reading / Writing / Mathematics / Combined strength profile.
 - Each cohort view also shows the **three-year combined trend and cohort size**.
@@ -21,8 +21,8 @@ A mobile-first interactive performance report for King's Cross Academy.
 
 1. 2026 data remains provisional until final validation/publication in November 2026.
 2. The KS2 cohort may change following confirmed disapplications.
-3. Camden calls one mobility category **"2 year mobility"**. Confirm the precise Camden definition before publishing the friendlier label "Joined in the final two years".
-4. The uploaded statutory summary and Camden MTC booklet contain different 2026 full-mark figures (38% vs 33%). Build 2 uses the Camden MTC booklet's 33% and flags the discrepancy in the page note so it can be resolved before publication.
+3. The Camden category **"2 year mobility"** has now been confirmed locally as pupils who joined from the start of Year 5 onwards. The public label is **"Joined since Year 5"**.
+4. The 2026 MTC full-marks figure has been confirmed by the school as **34%**. This replaces the earlier provisional 33% figure and removes the verification placeholder.
 
 ## File structure
 
@@ -38,3 +38,10 @@ All site content is static and can be published directly with GitHub Pages.
 - Added a mobile-first three-year direction graphic highlighting seven improving key outcomes and sustained 100% LAMDA performance.
 - Removed Camden averages from all public statutory comparison views; charts now focus on KCA and national data.
 - Retained Camden-derived internal cohort analysis where it provides the source data, without presenting Camden as a comparator.
+
+
+## Build 7 data-check updates
+- 2026 MTC 25/25 updated to school-confirmed **34%**.
+- Mobility label updated to **Joined since Year 5**, meaning pupils who joined from the start of Year 5 onwards.
+- KS2 SEND profile rechecked against the 17 July Camden booklet: **Reading 73%, Writing 73%, Mathematics 68%, Combined 64%**, cohort **22**.
+- Cohort strength-profile bars now use one consistent colour; colour no longer highlights the highest subject.

@@ -132,8 +132,8 @@
     `;
   };
 
-  const profileRow = (label, value, strongest=false) => `
-    <div class="profile-row ${strongest ? 'strongest' : ''}">
+  const profileRow = (label, value) => `
+    <div class="profile-row">
       <span>${esc(label)}</span>
       <div class="profile-track"><i style="width:${value}%"></i></div>
       <strong>${value}%</strong>
@@ -142,8 +142,6 @@
   const renderGroup = (key) => {
     const g = explorer.groups[key];
     const p = g.profile;
-    const values = Object.values(p);
-    const maxVal = Math.max(...values);
     const labels = { reading:'Reading', writing:'Writing', maths:'Mathematics', combined:'R/W/M combined' };
     const panel = document.querySelector('#cohort-panel');
     panel.innerHTML = `
@@ -157,7 +155,7 @@
         </div>
         <div class="cohort-profile-card">
           <div class="profile-title"><strong>2026 strength profile</strong><span>expected standard+</span></div>
-          ${Object.entries(p).map(([k,v]) => profileRow(labels[k], v, v===maxVal)).join('')}
+          ${Object.entries(p).map(([k,v]) => profileRow(labels[k], v)).join('')}
         </div>
       </div>
       <div class="cohort-trend-card">

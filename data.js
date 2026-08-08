@@ -84,9 +84,9 @@ window.KCA_DATA = {
         {
           name: "Pupils achieving full marks",
           unit: "%",
-          school: [38, 44, 33],
+          school: [38, 44, 34],
           national: [34, 37, null],
-          note: "The current provisional source gives 33% achieving full marks in 2026. The school's earlier summary contains a different figure, so this should be checked before final publication."
+          note: "34% of pupils achieved the maximum score of 25/25 in 2026. This is the school-confirmed final figure."
         },
         {
           name: "Average mark",
@@ -154,7 +154,7 @@ window.KCA_DATA = {
         combinedTrend: [27,21,64],
         cohortTrend: [22,14,22],
         headline: "Ambition and inclusion together",
-        commentary: "In 2026, 73% of pupils with SEND reached the expected standard in both reading and writing, 68% in mathematics and 64% across the combined measure. This group includes pupils with a wide range of needs and starting points."
+        commentary: "In 2026, 73% of pupils with SEND reached the expected standard in both reading and writing, 68% in mathematics and 64% across the combined measure. The source dataset reports this cohort as ‘All SEN pupils’; it includes pupils with a wide range of needs and starting points."
       },
       afterY1: {
         label: "Joined after Year 1",
@@ -167,16 +167,16 @@ window.KCA_DATA = {
         commentary: "The source analysis defines this group as pupils who were on roll after September of Year 1. In 2026, this group achieved 78% combined and 83% in reading — a strong outcome for pupils who did not experience their entire primary journey at KCA."
       },
       finalTwoYears: {
-        label: "Joined in the final two years*",
-        short: "Final 2 years*",
+        label: "Joined since Year 5",
+        short: "Joined since Y5",
         cohort: 3,
         profile: { reading: 100, writing: 100, maths: 100, combined: 100 },
         combinedTrend: [0,20,100],
         cohortTrend: [2,10,3],
         headline: "A very small cohort — interpret with care",
-        commentary: "The source report labels this category '2 year mobility'. The 2026 group contains only three pupils, so percentages move dramatically with each child and should not be treated as a school-wide trend."
+        commentary: "This group includes pupils who joined King's Cross Academy from the start of Year 5 onwards. The 2026 group contains only three pupils, so percentages move dramatically with each child and should be interpreted with particular care."
       }
     },
-    mobilityNote: "*Working label. The source report calls this category '2 year mobility'. Confirm the precise local definition before the public version is published."
+    mobilityNote: "‘Joined since Year 5’ refers to pupils who joined King's Cross Academy from the start of Year 5 onwards."
   }
 };
