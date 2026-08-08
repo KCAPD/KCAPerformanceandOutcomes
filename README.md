@@ -81,3 +81,9 @@ Build 10f verified:
 - stronger dataset heading treatment retained
 - desktop EYFS GLD card forced to 520px centred width with higher-specificity CSS
 - page source contains: KCA PERFORMANCE BUILD 10F VERIFIED
+
+Build 10g final:
+- added a persistent “← Return to KCA website” link in the top banner
+- link goes to https://www.kingscrossacademy.org.uk in the same tab
+- kept visible on mobile rather than hiding it in the menu
+- bumped local asset cache versions to ?v=10g
