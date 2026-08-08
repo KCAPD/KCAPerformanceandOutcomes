@@ -75,7 +75,7 @@ window.KCA_DATA = {
         }
       ],
       commentaryTitle: "Keeping the whole reading journey in view",
-      commentary: "The 2026 Year 1 result is lower than we want it to be and early reading remains an important priority. At the same time, the Year 2 outcome shows that many children who need additional time go on to meet the expected standard. We will continue to focus sharply on strong phonics teaching and timely support for every child who needs it."
+      commentary: "The 2026 Year 1 result is lower than we want it to be and early reading remains an important priority. A number of pupils were very close to meeting the threshold. These children will receive bespoke phonics teaching, carefully woven through the wider curriculum, so that gaps are addressed quickly and they are supported to meet the expected standard securely by the end of Year 2. Our strong Year 2 cumulative outcome gives us confidence in the impact of this sustained, targeted approach."
     },
     mtc: {
       kicker: "04 · Multiplication Tables Check",
@@ -99,14 +99,14 @@ window.KCA_DATA = {
         }
       ],
       commentaryTitle: "Fluency matters — and we remain ambitious",
-      commentary: "Secure multiplication facts give children greater confidence as mathematics becomes more complex. Our average score remains strong, but we want more pupils to develop truly automatic recall and reach the top of the scale. That will remain a clear focus in our mathematics teaching."
+      commentary: "Secure multiplication facts give children greater confidence as mathematics becomes more complex. In 2026, 68% of pupils scored more than 22 marks out of 25 — an exceptionally strong level of fluency across the cohort. The Multiplication Tables Check is designed to help schools identify where pupils may benefit from further support, rather than to operate as a stand-alone measure of attainment. We will use this detailed information to target future teaching and intervention as the cohort moves into Year 5, while continuing to develop confident and fluent mathematicians."
     },
     ks2: {
       kicker: "05 · Key Stage 2",
       title: "Strong expected-standard outcomes in 2026.",
       intro: "At the end of Year 6, pupils are assessed in reading and mathematics through national tests and in writing through teacher assessment. The combined measure records pupils who meet the expected standard in reading, writing and mathematics.",
       story: "The strongest 2026 KS2 story is the improvement at expected standard: 80% in reading, 78% in writing, 78% in mathematics and 73% combined. The current national figures are 75%, 73%, 75% and 63% respectively.",
-      provisionalExtra: "KS2 is particularly provisional: current outcomes may change following confirmed disapplications, including two pupils currently being considered for disapplication, and final cohort validation.",
+      provisionalExtra: "KS2 is particularly provisional: current outcomes may change following confirmed disapplications, including pupils currently being considered for disapplication, and final cohort validation.",
       measures: [
         { name: "Reading · expected standard", unit: "%", school: [62,78,80], national: [74,76,75], note: "2026 national figures are provisional in the July KS2 analysis." },
         { name: "Writing · expected standard", unit: "%", school: [65,76,78], national: [72,73,73], note: "Writing is teacher assessed." },
@@ -123,7 +123,7 @@ window.KCA_DATA = {
         { name: "Grammar, punctuation & spelling", school: [101.6,104.2,105.7], national: [105,105,105] }
       ],
       commentaryTitle: "A strong year at the end of primary school",
-      commentary: "Our 2026 outcomes reflect the hard work of our children and staff and the sustained improvements we have made to teaching and the curriculum. Reading, writing and mathematics outcomes at the expected standard are strong, with particularly encouraging outcomes for pupils with SEND. We are proud of this progress while remaining ambitious about increasing the proportion of pupils working at the higher standard."
+      commentary: "Our 2026 outcomes reflect the hard work of our children and staff and the sustained improvements we have made to teaching and the curriculum. Reading, writing and mathematics outcomes at the expected standard are strong, with particularly encouraging outcomes for pupils with SEND. We are proud of this progress while remaining ambitious about the next stage of improvement. During 2026/27, a particular whole-school focus will be the development of writing at greater depth, alongside our continued ambition to increase higher-standard outcomes across the curriculum."
     }
   },
   ks2Explorer: {

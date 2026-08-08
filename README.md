@@ -15,7 +15,7 @@ A mobile-first interactive performance report for King's Cross Academy.
 - Every filtered result shows the **sample size** prominently.
 - Each cohort view shows a 2026 Reading / Writing / Mathematics / Combined strength profile.
 - Each cohort view also shows the **three-year combined trend and cohort size**.
-- Provisional-data messaging remains prominent, including the current KS2 disapplication caveat.
+- Provisional-data messaging remains prominent, including the current KS2 disapplication caveat without publishing the number of pupils involved.
 
 ## Important data notes before publication
 
@@ -49,3 +49,11 @@ All site content is static and can be published directly with GitHub Pages.
 
 ## Build 8 commentary pass
 Final pre-autumn-data commentary pass: section-specific Headteacher commentary headlines, parent-facing narrative, and Headteacher sign-off. Data architecture remains unchanged from Build 7.
+
+
+## Build 9 commentary/data presentation refinements
+- KS2 provisional wording no longer states the number of pupils being considered for disapplication.
+- Phonics commentary explains near-threshold pupils and bespoke teaching through Year 2.
+- MTC commentary highlights that 68% scored above 22/25 and explains how the check informs Year 5 teaching and intervention.
+- KS2 commentary identifies greater-depth writing as a 2026/27 school-improvement focus.
+- Cohort explorer now shows each selected group as both a pupil count and a percentage of the 40-pupil 2026 KS2 cohort. Group categories can overlap.

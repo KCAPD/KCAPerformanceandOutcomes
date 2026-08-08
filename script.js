@@ -149,7 +149,7 @@
         <div class="cohort-summary-main">
           <span class="cohort-kicker">2026 cohort</span>
           <h3>${esc(g.label)}</h3>
-          <div class="cohort-size"><span aria-hidden="true">●●●</span><strong>${g.cohort}</strong><small>pupils</small></div>
+          <div class="cohort-size"><span aria-hidden="true">●●●</span><strong>${g.cohort}</strong><small>pupils · ${Math.round((g.cohort / explorer.groups.all.cohort) * 100)}% of cohort</small></div>
           <p class="cohort-headline">${esc(g.headline)}</p>
           <p>${esc(g.commentary)}</p>
         </div>
