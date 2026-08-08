@@ -182,3 +182,21 @@
   }, { threshold: .12 });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 })();
+
+// Wider-outcome trend charts: deliberately simple, touch-safe and fully labelled.
+document.querySelectorAll('.trend-chart').forEach((chart) => {
+  const values = (chart.dataset.values || '').split(',').map(Number);
+  const years = (chart.dataset.years || '').split(',');
+  if (!values.length || values.some(Number.isNaN)) return;
+  const width = 600, height = 210;
+  const pad = { left: 44, right: 26, top: 30, bottom: 38 };
+  const innerW = width - pad.left - pad.right;
+  const innerH = height - pad.top - pad.bottom;
+  const x = (i) => pad.left + (values.length === 1 ? innerW / 2 : (innerW * i / (values.length - 1)));
+  const y = (v) => pad.top + innerH * (1 - v / 100);
+  const gridVals = [100, 75, 50, 25, 0];
+  const grid = gridVals.map(v => `<line class="grid-line" x1="${pad.left}" y1="${y(v)}" x2="${width-pad.right}" y2="${y(v)}"></line><text class="axis-label-svg" x="${pad.left-8}" y="${y(v)+4}">${v}%</text>`).join('');
+  const points = values.map((v,i)=>`${x(i)},${y(v)}`).join(' ');
+  const circles = values.map((v,i)=>`<circle class="trend-point" cx="${x(i)}" cy="${y(v)}" r="6"></circle><text class="value-label" x="${x(i)}" y="${Math.max(18,y(v)-13)}">${v}%</text><text class="year-label-svg" x="${x(i)}" y="${height-13}">${years[i] || ''}</text>`).join('');
+  chart.innerHTML = `<svg viewBox="0 0 ${width} ${height}" role="img" aria-hidden="true" preserveAspectRatio="none">${grid}<polyline class="trend-line" points="${points}"></polyline>${circles}</svg>`;
+});

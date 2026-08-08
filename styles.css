@@ -40,3 +40,21 @@
 .wider-section{background:#fff}.wider-grid{display:grid;gap:16px}.wider-card{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:26px;padding:22px;background:#fff;box-shadow:var(--shadow)}.wider-card:before{content:"";position:absolute;width:150px;height:150px;border-radius:50%;right:-55px;top:-55px;background:rgba(98,189,232,.13)}.wider-kicker{display:inline-block;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;font-weight:800;color:var(--blue-deep)}.wider-card h3{font-size:1.55rem;margin:8px 0 18px}.wider-big{display:flex;align-items:baseline;gap:10px;margin-bottom:14px}.wider-big strong{font-size:clamp(3.1rem,13vw,5rem);line-height:.9;letter-spacing:-.06em;color:var(--navy)}.wider-big span{font-weight:800;color:var(--muted)}.wider-card>p{color:var(--muted);max-width:620px}.wider-years{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:22px 0 16px}.wider-years div{background:#f7fafc;border:1px solid var(--line);border-radius:16px;padding:13px 8px;text-align:center}.wider-years span{display:block;font-size:.7rem;font-weight:800;color:var(--muted)}.wider-years strong{display:block;font-size:1.35rem;color:var(--navy);margin-top:3px}.wider-years .latest{background:#eaf8ff;border-color:rgba(20,111,156,.25)}.wider-note{font-size:.8rem!important;margin:0;padding-top:14px;border-top:1px solid var(--line)}.wider-note strong{color:var(--ink)}.lamda-card{border-top:5px solid var(--yellow)}.swim-card{border-top:5px solid var(--blue)}
 @media (min-width:760px){.wider-grid{grid-template-columns:1fr 1fr}.wider-card{padding:28px}}
 @media (max-width:430px){.wider-card{padding:18px;border-radius:20px}.wider-card h3{font-size:1.3rem}.wider-big strong{font-size:3.5rem}.wider-years{gap:6px}.wider-years div{padding:11px 5px}.wider-years strong{font-size:1.15rem}}
+
+/* v5: wider outcomes use the same data-card language as statutory measures */
+.wider-measure-card{padding:22px}
+.wider-measure-card .measure-head>div{min-width:0}
+.wider-measure-card .measure-head h3{margin-top:5px}
+.wider-intro{color:var(--muted);margin:-4px 0 18px;max-width:640px;font-size:.92rem}
+.trend-chart{position:relative;height:210px;margin:6px 0 18px;border-radius:18px;background:linear-gradient(to bottom,#fbfcfd,#fff);border:1px solid var(--line);overflow:hidden}
+.trend-chart svg{display:block;width:100%;height:100%}
+.trend-chart .grid-line{stroke:#e7edf1;stroke-width:1}
+.trend-chart .trend-line{fill:none;stroke:var(--blue-deep);stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+.trend-chart .trend-point{fill:#fff;stroke:var(--blue-deep);stroke-width:4}
+.trend-chart .value-label{fill:var(--navy);font-size:13px;font-weight:800;text-anchor:middle}
+.trend-chart .year-label-svg{fill:var(--muted);font-size:12px;font-weight:700;text-anchor:middle}
+.trend-chart .axis-label-svg{fill:var(--muted);font-size:10px;font-weight:700;text-anchor:end}
+.wider-three-year{margin-top:0}
+.wider-three-year .year-value{justify-content:space-between}
+@media (min-width:760px){.wider-measure-card{padding:26px}.trend-chart{height:230px}}
+@media (max-width:430px){.wider-measure-card{padding:15px}.trend-chart{height:190px;border-radius:15px}.trend-chart .value-label{font-size:12px}.trend-chart .year-label-svg{font-size:11px}.wider-three-year .year-card{grid-template-columns:52px 1fr}.wider-three-year .year-value{text-align:right}}
