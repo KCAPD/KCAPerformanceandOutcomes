@@ -87,3 +87,5 @@ Build 10g final:
 - link goes to https://www.kingscrossacademy.org.uk in the same tab
 - kept visible on mobile rather than hiding it in the menu
 - bumped local asset cache versions to ?v=10g
+
+Build 10h: October 2026 Camden Learning phonics booklet. Updated Year 1 SEND/disadvantaged subgroup figures and 2026 national phonics comparators. Year 2 subgroup source: all 60 (93%), SEND 17 (88%), disadvantaged 30 (93%). Year 2 explorer not added; retain for future expansion.

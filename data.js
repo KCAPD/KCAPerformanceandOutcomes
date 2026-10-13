@@ -67,11 +67,11 @@ window.KCA_DATA = {
       intro: "The Year 1 Phonics Screening Check assesses whether pupils can decode a mixture of real words and pseudo-words. Pupils who do not meet the standard in Year 1 are checked again in Year 2.",
       story: "Year 1 outcomes are lower in 2026 than in the previous two years, while the Year 2 re-check shows a strong cumulative picture. This is an area where the trend matters more than a single headline.",
       explorer: {
-        intro: "Explore the current 2026 Year 1 phonics picture by pupil group. These subgroup figures are drawn from the Academy's current pupil-level phonics record and will be refreshed when the final validated dataset is available.",
+        intro: "Explore the 2026 Year 1 phonics outcomes by pupil group, using Camden Learning's October 2026 phonics booklet.",
         groups: {
           all: { label: "All pupils", short: "All pupils", cohort: 58, metrics: [{ label: "Meeting the expected standard", value: 78, unit: "%" }], note: "The published provisional headline remains 78%." },
-          send: { label: "Pupils with SEND", short: "SEND", cohort: 11, metrics: [{ label: "Recorded as meeting the standard", value: 36, unit: "%" }], note: "Current internal pupil-level record; this figure will be refreshed against the final validated phonics dataset." },
-          disadvantaged: { label: "Disadvantaged pupils", short: "Disadvantaged*", cohort: 25, metrics: [{ label: "Recorded as meeting the standard", value: 76, unit: "%" }], note: "Current internal pupil-level record. ‘Disadvantaged’ is the Department for Education reporting category, not a KCA label." }
+          send: { label: "Pupils with SEND", short: "SEND", cohort: 12, metrics: [{ label: "Meeting the expected standard", value: 42, unit: "%" }], note: "October 2026 Camden Learning phonics booklet; all pupils identified with SEN." },
+          disadvantaged: { label: "Disadvantaged pupils", short: "Disadvantaged*", cohort: 22, metrics: [{ label: "Meeting the expected standard", value: 82, unit: "%" }], note: "October 2026 Camden Learning phonics booklet. ‘Disadvantaged’ is the Department for Education reporting category, not a KCA label." }
         }
       },
       measures: [
@@ -79,15 +79,15 @@ window.KCA_DATA = {
           name: "Year 1 meeting the expected standard",
           unit: "%",
           school: [91, 91, 78],
-          national: [79, 80, null],
-          note: "2026 national figure not yet available in the current summary."
+          national: [80, 80, 80],
+          note: "2026 national comparison from the October 2026 Camden Learning phonics booklet."
         },
         {
           name: "Year 2 meeting the expected standard",
           unit: "%",
           school: [90, 91, 93],
-          national: [89, 89, null],
-          note: "Shows the cumulative position after the Year 2 re-check."
+          national: [89, 89, 89],
+          note: "Cumulative outcome by the end of Year 2; national comparison from the October 2026 Camden Learning phonics booklet."
         }
       ],
       commentaryTitle: "Keeping the whole reading journey in view",
